@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbox.IO</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        #chat { position: fixed; bottom: 0; width: 60%; }
+        #m { width: 90%; }
+        .sendMessage { position: fixed; bottom: 5px; }
+        li:nth-child(odd) { background: #eee; }
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+   <h1>Chatbox.io</h1>
+    <div class="col-sm-12">
+        <div class="col-sm-8">
+            <h3>messages</h3>
+            <ul class="messages list-group">
+                <li class="list-group-item"><strong><span class="text-success">Shelby Says: </span></strong> What's going on everyone? </li>
+                <li class="list-group-item"><strong><span class="text-success">Chelsie Says: </span></strong> Nm u? </li>
+                <li class="list-group-item"><strong><span class="text-success">Antonio Says: </span></strong> I'm not sure how I got here... </li>
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <h3>people</h3>
+            <ul class="people">
+                <a class="list-group-item">Antonio</a>
+                <a class="list-group-item">Shelby</a>
+                <a class="list-group-item">Chelsie</a>
+            </ul>
+        </div>
+    </div>   
+  
+    <div class="row">
+        <div class="col-sm-10 sendMessage">
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control input-sm" placeholder="Send Message...">
+                <span class="input-group-btn"><button class="btn btn-primary btn-sm">Send</button></span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+    
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    $(document).ready(function() {
+//        var socket = io();
+//        
+//        var connection = io.connect();
+//
+//        connection.on('disconnect', function(){
+//            alert('Socket is disconnected.');
+//            $("#m").attr("disabled", "disabled");
+//			$("button").attr("disabled", "disabled");
+//        });
+//        
+//        $('#chat').hide();
+//        $('#name').focus();
+//        $('form').submit(function(event) {
+//            event.preventDefault();
+//        });
+//        
+//        $('#join').click(function() {
+//            var name = $('#name').val();
+//            if(name != "") {
+//                socket.emit('join', name);
+//                ready = true;
+//                $('#login').detach();
+//                $('#chat').show();
+//                $('#m').focus();
+//            }
+//        });
+//        
+//        $('#name').keypress(function(e) {
+//            if(e.which == 13) {
+//                var name = $('#name').val();
+//                if(name != "") {
+//                    socket.emit("join", name);
+//                    ready = true;
+//                    $('#login').detach();
+//                    $('#chat').show();
+//                    $('#m').focus();
+//                }
+//            }
+//        });
+//        
+//        socket.on("update-people", function(people){
+//			if(ready) {
+//				$("#people").empty();
+//				$.each(people, function(clientid, name) {
+//					$('#people').append("<li>" + name + "</li>");
+//				});
+//			}
+//		});
+//            
+//        socket.on('chat message', function(msg) {
+//            $('#msg').append($('<li>' + msg + '</li>'));
+//        });
+//        
+//        $("#send").click(function(){
+//			var msg = $("#m").val();
+//			socket.emit("send", msg);
+//			$("#m").val("");
+//		});
+//		$("#m").keypress(function(e){
+//			if(e.which == 13) {
+//				var msg = $("#m").val();
+//				socket.emit("send", msg);
+//				$("#m").val("");
+//			}
+//		});
+//    });
+//    });
+    
+    
+</script>
+</body>
+</html>
